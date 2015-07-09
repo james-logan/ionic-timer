@@ -36,21 +36,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/org.apache.cordova.vibration/www/vibration.js",
-        "id": "org.apache.cordova.vibration.notification",
-        "merges": [
-            "navigator.notification",
-            "navigator"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.dialogs/www/notification.js",
-        "id": "org.apache.cordova.dialogs.notification",
-        "merges": [
-            "navigator.notification"
-        ]
-    },
-    {
         "file": "plugins/org.apache.cordova.media/www/MediaError.js",
         "id": "org.apache.cordova.media.MediaError",
         "clobbers": [
@@ -62,6 +47,21 @@ module.exports = [
         "id": "org.apache.cordova.media.Media",
         "clobbers": [
             "window.Media"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-dialogs/www/notification.js",
+        "id": "cordova-plugin-dialogs.notification",
+        "merges": [
+            "navigator.notification"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-vibration/www/vibration.js",
+        "id": "cordova-plugin-vibration.notification",
+        "merges": [
+            "navigator.notification",
+            "navigator"
         ]
     },
     {
@@ -219,9 +219,9 @@ module.exports.metadata =
     "cordova-plugin-device": "1.0.1",
     "cordova-plugin-splashscreen": "2.1.0",
     "cordova-plugin-whitelist": "1.0.0",
-    "org.apache.cordova.vibration": "0.3.13",
-    "org.apache.cordova.dialogs": "0.3.0",
     "org.apache.cordova.media": "0.2.16",
+    "cordova-plugin-dialogs": "1.1.1",
+    "cordova-plugin-vibration": "1.2.0",
     "org.apache.cordova.file": "1.3.3"
 }
 // BOTTOM OF METADATA

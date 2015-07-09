@@ -80,6 +80,7 @@ angular.module('starter', ['ionic'])
         $scope.countdown.minutes === 0 &&
         $scope.countdown.hours === 0 ) {
       clearInterval($scope.clear)
+      navigator.notification.vibrate(1500);
     }
   }
 })
