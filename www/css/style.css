@@ -1,2 +1,14 @@
 /* Empty. Add your own CSS if you like */
 
+.button-bar button {
+	font-weight: bolder;
+}
+
+.time-clock p {
+	color: white;
+}
+
+h3 {
+	font-family: 'PT Serif', serif;
+	color: white;
+}
