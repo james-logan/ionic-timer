@@ -25,10 +25,38 @@ angular.module('starter', ['ionic'])
     seconds: 0
   }
 
-  $scope.countdown = {};
+
+  $scope.countdown = {
+    hours: "00",
+    minutes: "00",
+    seconds: "00"
+  };
   $scope.timerStart = function() {
     $scope.countdown = $scope.time;
-    $scope.clear = setInterval($scope.counter, 1000)
+    if ($scope.time.hours === 0 && $scope.time.minutes ===0 && $scope.time.seconds === 0) {
+      $scope.clear = setInterval($scope.upCount, 1000);
+    } else {
+      $scope.clear = setInterval($scope.counter, 1000)
+    }
+  }
+
+  $scope.upCount = function () {
+    if ($scope.countdown.seconds === 59) {
+        if ($scope.countdown.minutes === 59) {
+          $scope.countdown.hours += 1;
+          $scope.countdown.minutes = 0;
+        } else {
+          $scope.countdown.minutes += 1;
+        }
+        $scope.countdown.seconds = 0;
+      } else {
+        $scope.countdown.seconds += 1;
+      }
+    $scope.$apply();
+  }
+
+  $scope.stopTimer = function () {
+    clearInterval($scope.clear);
   }
 
   $scope.counter = function() {
