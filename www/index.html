@@ -23,11 +23,17 @@
   </head>
   <body ng-app="starter">
 
-    <ion-pane>
+    <ion-pane ng-controller="timerController as timer">
       <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
+        <h1 class="title">Ionic Timer</h1>
       </ion-header-bar>
-      <ion-content>
+      <ion-content style="background-color: gray">
+        <h3>Hoursssss</h3>
+        <input type="number" min="0" max="24" ng-model="time.hours">
+        <h3>Minutes</h3>
+        <input type="number" min="0" max="60" ng-model="time.minutes">
+        <h3>Seconds</h3>
+        <input type="number" min="0" max="60" ng-model="time.seconds">
       </ion-content>
     </ion-pane>
   </body>

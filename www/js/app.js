@@ -17,3 +17,11 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+
+.controller('timerController', function ($scope) {
+  $scope.time = {
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  }
+})

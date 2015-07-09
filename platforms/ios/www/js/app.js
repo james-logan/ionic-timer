@@ -17,3 +17,7 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+
+.controller('timerController', function ($scope) {
+
+})
