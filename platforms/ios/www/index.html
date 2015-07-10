@@ -7,6 +7,7 @@
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
@@ -22,61 +23,42 @@
     <script src="js/app.js"></script>
   </head>
   <body ng-app="starter" class="platform-ios platform-cordova platform-webview">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-2"></div>
-          <div class="col-xs-6">
-          <ion-pane ng-controller="timerController as timer">
-           <ion-header-bar class="bar-stable">
-            <h1 class="title">Ionic Timer</h1>
-          </ion-header-bar>
-           <ion-content style="background-color: gray">
-             <h3>Hoursssss</h3>
-                <input type="number" min="0" max="24" ng-model="time.hours">
-                <h3>Minutes</h3>
-                <input type="number" min="0" max="60" ng-model="time.minutes">
-                <h3>Seconds</h3>
-                <input type="number" min="0" max="60" ng-model="time.seconds">
-
     <ion-pane ng-controller="timerController as timer">
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Timer</h1>
-      </ion-header-bar>
-      <ion-content style="background-color: gray">
-        <div class="row">
-          <div class="col-33">
-            <div>Hours</div>
-            <label class="item item-input">
-              <input type="number" min="0" max="24" ng-model="time.hours" placeholder="Hours">
-            </label>
-          </div >
-          <div class="col-33">
-            <div>Minutes</div>
-            <label class="item item-input">
-              <input type="number" min="0" max="59" ng-model="time.minutes" placeholder="minutes">
-            </label>
-          </div>
-          <div class="col-33">
-            <div>Seconds</div>
-            <label class="item item-input">
-              <input type="number" min="0" max="59" ng-model="time.seconds" placeholder="Seconds">
-            </label>
-          </div>
-        </div>
+     <ion-header-bar class="bar-stable">
+      <h1 class="title">Countdown to Winter</h1>
+    </ion-header-bar>
+     <ion-content style="background-image: url(img/winterIsComing.jpeg);">
+              <div class="row">
+                <div class="col-33">
+                  <div>Hours</div>
+                  <label class="item item-input">
+                    <input type="number" min="0" max="24" ng-model="time.hours" placeholder="Hours">
+                  </label>
+                </div >
+                <div class="col-33">
+                  <div>Minutes</div>
+                  <label class="item item-input">
+                    <input type="number" min="0" max="59" ng-model="time.minutes" placeholder="minutes">
+                  </label>
+                </div>
+                <div class="col-33">
+                  <div>Seconds</div>
+                  <label class="item item-input">
+                    <input type="number" min="0" max="59" ng-model="time.seconds" placeholder="Seconds">
+                  </label>
+                </div>
+              </div>
 
-        <div class="row">
-          <div class="button-bar">
-            <button class="button button-stable button-balanced" ng-click="timerStart()">START</button>
-            <button class="button button-stable button-assertive" ng-click="stopTimer()">STOP</button>
-          </div>
-        </div>
-        <div class="row" style="margin-top: 30px">
-          <div class="col-100 col-center">
-            <p style="font-size: 4em; text-align: center;">{{countdown.hours}}:{{countdown.minutes}}:{{countdown.seconds}}</p>
-          </div>
-        </div>
-          <div class="col-xs-2"></div>
-      </div>
-    </div>
-  </body>
-</html>
+              <div class="row">
+                <div class="button-bar">
+                  <button class="button button-stable button-balanced" ng-click="timerStart()">START</button>
+                  <button class="button button-stable button-assertive" ng-click="stopTimer()">STOP</button>
+                </div>
+              </div>
+              <div class="row time-clock" style="margin-top: 30px">
+                <div class="col-100 col-center">
+                  <p style="font-size: 4em; text-align: center;">{{countdown.hours}}:{{countdown.minutes}}:{{countdown.seconds}}</p>
+                </div>
+              </div>
+        </body>
+      </html>

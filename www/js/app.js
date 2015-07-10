@@ -80,7 +80,16 @@ angular.module('starter', ['ionic'])
         $scope.countdown.minutes === 0 &&
         $scope.countdown.hours === 0 ) {
       clearInterval($scope.clear)
-      navigator.notification.vibrate(1500);
+      navigator.notification.beep(4);
+
+
+    } else if ($scope.countdown.seconds === 20 &&
+        $scope.countdown.minutes === 0 &&
+        $scope.countdown.hours === 0 ) {
+      var media = new Media("img/GameOfThrones.m4r");
+
+      media.play();
+
     }
   }
 })
